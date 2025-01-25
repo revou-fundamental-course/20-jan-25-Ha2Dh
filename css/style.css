@@ -1,1 +1,6 @@
-/* Ini CSS
+/* Ini CSS */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
