@@ -1,6 +1,19 @@
 /* Ini CSS */
 
+main {
+    display: flex;
+    gap: 48px;
+}
+.main-header {
+    text-align: center;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
+}
+
+#result-BMI {
+    font-size: xxx-large;
+    font-family: math;
 }
