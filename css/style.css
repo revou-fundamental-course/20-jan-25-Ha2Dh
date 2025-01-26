@@ -1,19 +1,58 @@
 /* Ini CSS */
 
+/* Body Main */
 main {
     display: flex;
     gap: 48px;
+    padding: 16px
 }
 .main-header {
     text-align: center;
 }
 
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+form {
+    background-color: #7fffd4;
+    padding: 10px;
+}
 .form-group {
     display: flex;
     flex-direction: column;
+    padding-bottom: 8px;
 }
+.result-cont-r {
+    padding: 12px;
+    text-align: center;
+    background-color: #029967;
+}
+
+/* Button */
+button {
+    border: none;
+    padding: 4px;
+    color: whitesmoke;
+}
+
+.button-hitung {
+    background-color: rgb(60, 122, 255);
+}
+.button-reset {
+    background-color: crimson;
+}
+
 
 #result-BMI {
     font-size: xxx-large;
     font-family: math;
+}
+
+/* Foot */
+footer {
+    text-align: center;
 }
