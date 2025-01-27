@@ -1,13 +1,16 @@
 /* Ini CSS */
 
 /* Body Main */
+.main-header {
+    text-align: center;
+    background-color: rgb(209, 255, 220);
+    padding: 8px;
+}
+
 main {
     display: flex;
     gap: 48px;
     padding: 16px
-}
-.main-header {
-    text-align: center;
 }
 
 input[type=number] {
@@ -21,15 +24,25 @@ form {
     background-color: #7fffd4;
     padding: 10px;
 }
+#BMI-form {
+    background-color: #cacaca;
+    border-radius: 12px;
+}
+#form-label-left {
+    padding: 2px;
+    padding-bottom: 12px;
+}
 .form-group {
     display: flex;
     flex-direction: column;
     padding-bottom: 8px;
+    cursor: text;
 }
 .result-cont-r {
     padding: 12px;
     text-align: center;
-    background-color: #029967;
+    border-radius: 12px;
+    background-color: #ddfdff;
 }
 
 /* Button */
@@ -41,9 +54,15 @@ button {
 
 .button-hitung {
     background-color: rgb(60, 122, 255);
+    padding: 10px;
+    border-radius: 10%;
+    cursor: cell;
 }
 .button-reset {
     background-color: crimson;
+    padding: 10px;
+    border-radius: 10%;
+    cursor: pointer;
 }
 
 
