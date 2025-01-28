@@ -1,70 +1,98 @@
 /* Ini CSS */
 
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
 /* Body Main */
 .main-header {
     text-align: center;
     background-color: rgb(209, 255, 220);
-    padding: 8px;
+    padding: 2%;
 }
 
 main {
     display: flex;
-    gap: 48px;
+    gap: 24px;
+    margin: 8px;
     padding: 16px
+}
+
+form {
+    background-color: #7fffd4;
+    margin: 2px;
+    padding: 10px;
+}
+/* Left Content */
+#BMI-calc-form {
+    background-color: #cacaca;
+    border-radius: 12px;
 }
 
 input[type=number] {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 8px 16px;
+    margin: 6px 0;
+    border-radius: 8px;
     box-sizing: border-box;
   }
 
-form {
-    background-color: #7fffd4;
-    padding: 10px;
-}
-#BMI-form {
-    background-color: #cacaca;
-    border-radius: 12px;
-}
-#form-label-left {
+#form-kelamin-left {
+    margin: 4px;
     padding: 2px;
     padding-bottom: 12px;
 }
-.form-group {
+.form-group-left {
     display: flex;
     flex-direction: column;
-    padding-bottom: 8px;
+    margin: 4px;
+    padding-bottom: 4px;
     cursor: text;
-}
-.result-cont-r {
-    padding: 12px;
-    text-align: center;
-    border-radius: 12px;
-    background-color: #ddfdff;
 }
 
 /* Button */
 button {
     border: none;
     padding: 4px;
+    background-color: azure;
     color: whitesmoke;
 }
 
 .button-hitung {
     background-color: rgb(60, 122, 255);
     padding: 10px;
+    margin: 4px;
     border-radius: 10%;
     cursor: cell;
 }
 .button-reset {
     background-color: crimson;
     padding: 10px;
+    margin: 4px;
     border-radius: 10%;
     cursor: pointer;
 }
 
+.feature-left-form {
+    margin: 4px;
+    padding: 4px;
+}
+
+#ul-feature {
+    margin: 4px;
+    padding: 4px;
+    list-style-type: none;
+}
+
+/* Right Content */
+.result-cont-r {
+    padding: 12px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #ddfdff;
+}
 
 #result-BMI {
     font-size: xxx-large;

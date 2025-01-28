@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevoU MiniProject Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <h1><b>Kalkulator BMI</b></h1>
+    </header>
+
+    <!-- Intro -->
+    <article class="body-article">
+        <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu?</p>
+    </article>
+    
+    <!-- Main Content -->
+    <main style="display: flex; gap: 24px; justify-content: center; padding: 20px;">
+        <!-- Left Content -->
+        <section style="flex: 1;">
+
+            <article>
+                <h3><b>Yuk, hitung berat badan ideal kamu di bawah ini!</b></h3>
+            </article>
+
+            <!-- BMI Form -->
+            <form id="BMI-calc-form">
+                <div class="form-group">
+                    <label for="kelamin">Jenis Kelamin</label><br>
+                    <input type="radio" id="pria" name="kelamin" value="pria"> Pria
+                    <input type="radio" id="wanita" name="kelamin" value="wanita"> Wanita
+                </div>
+
+                <div class="form-group">
+                    <label for="input-berat-badan">Berat Badan (kg)</label>
+                    <input type="number" id="input-berat-badan" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-usia">Usia (Tahun)</label>
+                    <input type="number" id="input-usia" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
+                    <input type="number" id="input-tinggi-badan" required>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <button type="submit" class="button-hitung">Hitung BMI</button>
+                    <button type="reset" class="button-reset">Reset</button>
+                </div>
+            </form>
+
+            <!-- Feature Information -->
+            <article class="feature-info" style="margin-top: 25px;">
+                <h3>Fitur Kalkulator:</h3>
+                <ul>
+                    <li>1.Menghitung berat badan</li>
+                    <li>2.Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>3.Mempersiapkan program penurunan berat badan</li>
+                </ul>
+                <p><i>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini). Selalu konsultasikan hasil BMI dengan dokter Anda.</i></p>
+            </article>
+        </section>
+
+        <!-- Right Content -->
+        <section style="flex: 1;">
+            <!-- Result Section -->
+            <section class="result-cont-r">
+                <header>
+                    <h2><b>Hasil</b></h2>
+                </header>
+
+                <div style="font-size: 2em; text-align: center; margin: 20px 0;">
+                    <span id="result-BMI">0</span>
+                </div>
+
+                <div>
+                    <button type="download" class="download-result-button">Download Hasil</button>
+                </div>
+            </section>
+
+            <!-- Motivation Article -->
+            <div>
+             <article>
+                <p>Jika Anda merasa hasilnya belum sesuai harapan, jangan khawatir! Ini adalah langkah pertama untuk lebih peduli pada kesehatan tubuh Anda. Dengan sedikit perhatian lebih terhadap pola makan dan aktivitas fisik, Anda bisa mencapai tubuh yang lebih sehat dan bugar. Jadikan kesehatan sebagai prioritas!</p>
+             </article>
+
+              <button class="rounded-btn" id="contact-whatsapp" onclick="openWhatsAppTab()">Konsultasi Ahli Gizi Via Aplikasi</button>
+              <button class="rounded-btn" id="contact-whatsapp" onclick="openWhatsAppTab()">Registrasi Online Ahli Gizi</button>
+
+             </div>
+
+             <!-- End -->
+
+            <div class="consult-form">
+                <p>BMI Sepenuhnya tidak mewakili diagnosis menyeluruh dari Kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran anda terkait dengan berat badan anda.</p>
+
+                <h4>Penyakit yang Berkaitan dengan Kegemukan:</h4>
+                <ul>
+                    <li>Diabetes</li>
+                    <li>Hipertensi</li>
+                    <li>Sakit Jantung</li>
+                    <li>Osteoarthitis</li>
+                </ul>
+                <button class="rounded-btn" id="consult-doctor" onclick="openConsultationTab()">Konsultasi Dokter Via Aplikasi</button>
+                <script>
+                    function openConsultationTab() {
+                        const newTab = window.open('', '_blank');
+                        newTab.document.write(`
+                            <style>
+                                body {
+                                    background-color: #f0f0f0;
+                                    font-family: Arial, sans-serif;
+                                    text-align: center;
+                                    padding: 20px;
+                                }
+                                button {
+                                    margin: 10px;
+                                    padding: 10px 20px;
+                                    font-size: 16px;
+                                    cursor: pointer;
+                                }
+                            </style>
+                            <h1>Pilih Platform Konsultasi</h1>
+                            <button onclick="window.location.href='https://www.gooddoctor.co.id'" style="background-color: purple; color: white;">Good Doctor</button>
+                            <button onclick="window.location.href='https://www.halodoc.com'" style="background-color: purple; color: white;">Halodoc</button>
+                        `);
+                    }
+                </script>
+                <div id="doctor-options" style="display: none;"></div>
+
+                <button class="rounded-btn" id="register-doctor" onclick="openHaloDoc()">Registrasi Online Sekarang</button>
+
+                <script>
+                    function openHaloDoc() {
+                        window.open('https://www.halodoc.com', '_blank');
+                    }
+                </script>
+            </div>
+            
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 20px; margin-top: 20px;">
+        <span><i>BMI Calculator · MiniProject-SE RevoU · masih belajar mohon maklum · Made by Harry @Ha2Dh, 2025</i></span>
+    </footer>
+</body>
+</html>
