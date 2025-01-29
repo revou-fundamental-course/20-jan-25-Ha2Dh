@@ -1,105 +1,250 @@
-/* Ini CSS */
-
-*,
-html {
+/* ======= Global Styles ======= */
+* {
     margin: 0;
     padding: 0;
-}
-
-/* Body Main */
-.main-header {
-    text-align: center;
-    background-color: rgb(209, 255, 220);
-    padding: 2%;
-}
-
-main {
-    display: flex;
-    gap: 24px;
-    margin: 8px;
-    padding: 16px
-}
-
-form {
-    background-color: #7fffd4;
-    margin: 2px;
-    padding: 10px;
-}
-/* Left Content */
-#BMI-calc-form {
-    background-color: #cacaca;
-    border-radius: 12px;
-}
-
-input[type=number] {
-    width: 100%;
-    padding: 8px 16px;
-    margin: 6px 0;
-    border-radius: 8px;
     box-sizing: border-box;
-  }
-
-#form-kelamin-left {
-    margin: 4px;
-    padding: 2px;
-    padding-bottom: 12px;
+    font-family: Arial, sans-serif;
 }
-.form-group-left {
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* ======= Header ======= */
+.main-header {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ======= Intro Section ======= */
+.intro {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.intro h1 {
+    color: #007bff;
+}
+
+.intro p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* ======= Main Container ======= */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px;
+}
+
+/* ======= Left Section (Form) ======= */
+.left-section {
+    flex: 1;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+form {
     display: flex;
     flex-direction: column;
-    margin: 4px;
-    padding-bottom: 4px;
-    cursor: text;
+    gap: 15px;
 }
 
-/* Button */
-button {
+#BMI-calc-form {
+    padding: 15px;
+    background: #ffdff7;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+fieldset {
     border: none;
-    padding: 4px;
-    background-color: azure;
-    color: whitesmoke;
+    display: flex;
+    gap: 10px;
+    font-size: 1em;
 }
 
-.button-hitung {
-    background-color: rgb(60, 122, 255);
-    padding: 10px;
-    margin: 4px;
-    border-radius: 10%;
-    cursor: cell;
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
-.button-reset {
-    background-color: crimson;
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
     padding: 10px;
-    margin: 4px;
-    border-radius: 10%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Buttons */
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button-hitung, .button-reset {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.feature-left-form {
-    margin: 4px;
-    padding: 4px;
+.button-hitung {
+    background: #007bff;
+    color: white;
+}
+.button-hitung:hover {
+    background: #00438b;
 }
 
-#ul-feature {
-    margin: 4px;
-    padding: 4px;
-    list-style-type: none;
+.button-reset {
+    background: #f44336;
+    color: white;
+}
+.button-reset:hover {
+    background: #861e1e;
 }
 
-/* Right Content */
-.result-cont-r {
-    padding: 12px;
+/* ======= Right Section (Result & Consultation) ======= */
+.right-section {
+    flex: 1;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* BMI Result */
+.result-container {
     text-align: center;
-    border-radius: 12px;
-    background-color: #ddfdff;
+    padding: 15px;
+    background: #deffe0;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-#result-BMI {
-    font-size: xxx-large;
-    font-family: math;
+.result-container h2 {
+    margin-bottom: 10px;
 }
 
-/* Foot */
-footer {
+.bmi-result {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #007bff;
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100px;
+}
+
+/* Download Button */
+.download-button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.download-button:hover {
+    background: #165c25;
+}
+
+/* Motivation */
+.motivation {
     text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Consultation Section */
+.consultation-section, .health-info {
+    text-align: center;
+}
+
+.consult-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1em;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.consult-button:hover {
+    background: #a06000;
+}
+
+/* Health Info */
+.health-info {
+    padding: 15px;
+    background: #eaecee;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.health-info ul {
+    text-align: left;
+    margin: 10px auto;
+    max-width: 400px;
+}
+
+.health-info ul li {
+    margin-bottom: 5px;
+}
+
+/* ======= Footer ======= */
+.footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    background: #007bff;
+    color: white;
+}
+
+/* ======= Responsive Design ======= */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        max-width: 100%;
+    }
 }
