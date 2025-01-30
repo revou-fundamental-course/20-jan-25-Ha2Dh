@@ -134,6 +134,9 @@ input {
 }
 
 /* ======= Right Section (Result & Consultation) ======= */
+.header-hasil {
+    text-align: center;
+}
 .right-section {
     flex: 1;
     max-width: 500px;
@@ -165,6 +168,9 @@ input {
     border-radius: 10px;
     display: inline-block;
     width: 100px;
+}
+#result-BMI {
+    text-align: center;
 }
 
 /* Download Button */

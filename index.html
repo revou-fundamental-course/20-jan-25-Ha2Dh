@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI - MiniProject RevoU</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <link rel="icon" href="assets/calc-icon.png" type="image/png">
+
+    
 </head>
 <body>
 
@@ -45,17 +47,17 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="input-usia">Usia (Tahun)</label>
-                    <input type="number" id="input-usia" required>
-                </div>
-
-                <div class="form-group">
                     <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
                     <input type="number" id="input-tinggi-badan" required>
                 </div>
 
+                <div class="form-group">
+                    <label for="input-usia">Usia (Tahun)</label>
+                    <input type="number" id="input-usia" required>
+                </div>
+
                 <div class="form-buttons">
-                    <button type="submit" class="button-hitung">Hitung BMI</button>
+                    <button type="submit" class="button-hitung" onclick="calculateBMI()">Hitung BMI</button>
                     <button type="reset" class="button-reset">Reset</button>
                 </div>
             </form>
@@ -74,14 +76,21 @@
 
         <!-- Right Section -->
         <section class="right-section">
-            
+            <h2 class="header-hasil">Hasil</h2>
+
             <!-- Result Section -->
             <section class="result-container">
-                <h2>Hasil</h2>
+                
                 <div class="bmi-result">
                     <span id="result-BMI">0</span>
                 </div>
+
+                <p>Hasil BMI Anda: <span></span></p>
+                    <p id="status-BMI"></p> <!-- Menampilkan status berat badan -->
+
                 <button class="download-button" onclick="downloadResult()">Unduh Hasil</button>
+              
+            
             </section>
 
             <!-- Motivation -->
@@ -119,5 +128,6 @@
         <span><i>BMI Calculator · MiniProject-SE RevoU · masih belajar mohon maklum · Made by Harry @Ha2Dh, 2025</i></span>
     </footer>
 
+    <script src="js/script.js" defer></script>
 </body>
 </html>
